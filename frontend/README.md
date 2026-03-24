@@ -1,107 +1,21 @@
-# Pi Demo App - Frontend
+# 🖥️ NOVALEX FRONTEND GATEWAY (Utils)
 
-A React + TypeScript frontend for the Pi Demo App, built with Vite.
+This is the React + TypeScript interface for Sovereign Novalex. It handles the Pi SDK handshake and user authentication.
 
-## Getting Started
+## ⚡ QUICK START
+1. **Install Dependencies:**
+   ```sh
+   npm install  # (We are moving from yarn to npm for SIL automation)
+Configure Environment:
+Create a .env.development in this folder:
+| Variable | Purpose |
+| :--- | :--- |
+| PORT | Set to 3314 (The Pi Standard) |
+| VITE_BACKEND_URL | Your ASI/ASV Backend Link |
+| VITE_SANDBOX_SDK | true (For initial testing) |
 
-> For Docker setup, see the [Docker Setup documentation](../doc/docker-setup.md).
+Launch Terminal:
 
-### 1. Install dependencies
-
-```sh
-yarn install
-```
-
-### 2. Set up environment variables
-
-Set `.env.development` with the following variables:
-
-| Variable           | Description           | Example                 |
-| ------------------ | --------------------- | ----------------------- |
-| `PORT`             | Dev server port       | `3314`                  |
-| `VITE_BACKEND_URL` | Backend API URL       | `http://localhost:8000` |
-| `VITE_SANDBOX_SDK` | Enable Pi Sandbox SDK | `true`                  |
-
-### 3. Start the development server
-
-```sh
-yarn dev
-```
-
-The app will be available at `http://localhost:3314` (or your configured PORT).
-
----
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Bash
+npm run dev
+Part of the Sovereign Infrastructure Logic (SIL) ecosystem.
