@@ -1,47 +1,34 @@
-# SOVEREIGN NOVALEX: NGINX CONFIGURATION
-# Security Layer for SIL Ltd | Architect: Bamidele Peter
+# 🌌 SOVEREIGN NOVALEX (ASI) v11.0
+**The North Star of Digital Public Infrastructure (DPI) & TechReg**
 
-events {
-    worker_connections 1024;
-}
+Sovereign Novalex is an Autonomous Enterprise Operating System developed by **Sovereign Infrastructure Logic Ltd (SIL Ltd)**. It is built on a 12-Pillar "Apostle" architecture designed to provide data sovereignty, forensic financial protection, and automated compliance for the African continent.
 
-http {
-    include       mime.types;
-    default_type  application/octet-stream;
-    sendfile        on;
-    keepalive_timeout  65;
+## 🏛️ THE 12 PILLARS OF SOVEREIGNTY
+1. **Global Ledger:** Triple-entry Fiat/Pi reconciliation.
+2. **Chronos Forensic:** Automated bank-charge and tax leakage recovery.
+3. **Treasury:** 90-day predictive cashflow.
+4. **Strategic Management:** ABC Costing & Unit Economics.
+5. **Project Governance:** Milestone-based smart contract payments.
+6. **SII Academy:** TechReg & DPI Certification module.
+7. **SJR R&D:** Agentic Journalist & Research module.
+8. **Autonomous Procurement:** AI-driven vendor negotiation.
+9. **Vault (CaaS):** Regulatory-as-Code (RaC) & NDPA 2023 Enforcement.
+10. **ESG:** Green Finance & Carbon Credit tracking.
+11. **AfCFTA Trade:** Automated cross-border tariff orchestration.
+12. **Global Distribution:** Scaling SIL Ltd innovations worldwide.
 
-    # Gzip for fast loading in low-bandwidth regions (Africa)
-    gzip on;
-    gzip_types text/plain text/css application/json application/javascript;
+## 🚀 THE QUANTUM GROWTH ENGINE
+v11.0 introduces hyper-super intelligence for aggressive market acquisition, autonomous advertising, and proactive after-sales service.
 
-    server {
-        listen 80;
-        server_name acasovereign.online;
+## 🥧 PI NETWORK INTEGRATION (Protocol 20)
+Integrated with the Pi Network SDK for:
+- **Sovereign Escrow:** Smart contracts for fee-on-recovery services.
+- **Mainnet Mapping:** Direct wallet-to-ledger synchronization.
 
-        # Frontend Gateway (The ASI Interface)
-        location / {
-            proxy_pass http://frontend:3314;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection 'upgrade';
-            proxy_set_header Host $host;
-            proxy_cache_bypass $http_upgrade;
-        }
+## 🛡️ SYSTEM ARCHITECTURE
+- **Frontend:** ASI Interface (Port 3314)
+- **Backend:** Chronos/Vault API (Port 8000)
+- **Gateway:** Nginx Security Layer (Port 80)
 
-        # Backend Vault (The ASV/Chronos API)
-        location /api {
-            proxy_pass http://backend:8000;
-            proxy_set_header Host $host;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
-        }
-
-        # Health Check for Probity
-        location /health {
-            return 200 'Novalex Systems Operational';
-            add_header Content-Type text/plain;
-        }
-    }
-}
+---
+*Architect: Bamidele Peter | Lagos, Nigeria | SIL LTD*
