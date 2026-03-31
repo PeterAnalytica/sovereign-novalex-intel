@@ -1,0 +1,19 @@
+{
+  "short_name": "Novalex",
+  "name": "Sovereign Novalex Intelligence",
+  "description": "Apex DPI for the Pi Network. Secure TechReg and vNIN identity orchestration.",
+  "icons": [
+    {
+      "src": "https://acasovereign.online/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#003366",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#003366",
+  "category": "utility",
+  "protocol_version": "21.2"
+}
